@@ -1,1 +1,0 @@
-{"id":"6b0000000000000000000001","title":"Обложки WB/Ozon (копия)","nodes":[{"id":"6b00000000000000000000a1","type":"image_input","data":{"url":""},"position":{"x":0,"y":0}},{"id":"6b00000000000000000000a2","type":"text_prompt","data":{"text":""},"position":{"x":0,"y":200}}],"edges":[]}

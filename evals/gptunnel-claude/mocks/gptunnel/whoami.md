@@ -1,1 +1,1 @@
-{"user_id":"u_eval","scopes":["workflow:read","workflow:write","gallery:read","gallery:write"]}
+{"user_id":"u_eval","scopes":["gallery:read","gallery:write"]}

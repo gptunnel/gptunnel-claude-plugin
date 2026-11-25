@@ -13,4 +13,5 @@ Plugin MCP tools are named `mcp__plugin_gptunnel_gptunnel__<tool>`. For "the too
 | Case | Checks |
 |---|---|
 | `refuses-generation` | asked for an image, the catalog plugin says it cannot and points to gptunnel.ru |
-| `template-fork` | finds the right template, forks it, uploads the photo with `workflow_id`, reads the graph before updating |
+| `find-export` | finds the video by description and period, hands over the full-size `original_url`, changes nothing |
+| `organize-plan-first` | lists items before moving, moves only matching finished results (or asks first), leaves the rest alone |

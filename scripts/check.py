@@ -33,6 +33,8 @@ PLUGINS = {
 # The catalog plugin must not offer to spend money or produce media (Anthropic directory policy 4(B)).
 CATALOG_FORBIDDEN = re.compile(
     r'lab_generate|lab_quote|run_workflow|app_run|retry_node|max_cost_rub|'
+    # Drafting a generation job is refused too: workflows, templates, prompts to render (DEV-5993).
+    r'\bworkflows?\b|\btemplates?\b|upload_media|\bwrite (a |the )?prompt|'
     r'\bgenerate (an |a )?(image|video|picture|photo)|text-to-(image|video)|image generation|video generation',
     re.I,
 )

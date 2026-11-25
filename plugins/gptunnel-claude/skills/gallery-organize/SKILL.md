@@ -1,16 +1,18 @@
 ---
 name: gallery-organize
-description: Find and organize the user's results in the GPTunneL media library — search by prompt or type, sort into collections, rename or remove collections, upload files for later use. Use when the user asks to find a past image or video, tidy up their GPTunneL library, group results by project or client, or upload a file to GPTunneL. NOT for building workflows (use workflow-build).
+description: Sort the user's GPTunneL media library into collections — group results by project, client, type or month, create, rename or recolor collections, move items between them, remove collections. Use when the user asks to tidy up their GPTunneL library, make a collection, group results by project or client, or move items into or out of a collection. NOT for finding a single result or getting download links (use gallery-find-export) or a library overview (use library-review).
 ---
 
-# GPTunneL media library
+# Organize the GPTunneL library
 
-Nothing here charges the balance or copies files.
+Nothing here charges the balance or copies files: moving only changes which collection an item belongs to.
 
-1. **Find.** `gallery_list_generations` — filter by `search` (substring of the prompt), `type`, `collection_id` (`""` = without a collection). Page with `skip` / `limit` (max 50). Show what you found as a short list: date, type, first words of the prompt, link.
-2. **Collections.** `gallery_list_collections` for existing ones; `gallery_create_collection` for a new one; `gallery_update_collection` to rename or change icon and color.
-3. **Sort.** `gallery_move_generation` puts an item into a collection, `collection_id: null` takes it out. Moving does not copy anything.
-4. **Delete a collection.** `gallery_delete_collection` removes only the collection — confirm with the user first; the items stay in the library.
-5. **Upload.** `upload_media` stores a file (by URL or data) in GPTunneL. With `workflow_id` the file is kept with that workflow; without it the file is temporary (48 hours) — say so.
+1. **See what exists.** `gallery_list_collections` — names, ids, item counts.
+2. **Pick the items.** `gallery_list_generations` with `search`, `type`, `created_after` / `created_before` or `collection_id: ""` (items without a collection). Page with `skip` / `limit` (max 50) until `next_skip` disappears.
+3. **Show the plan before changing anything** when more than a few items move: which collection gets which items (count and two or three examples each), which collections will be created. Wait for the go-ahead.
+4. **Create or adjust collections.** `gallery_create_collection` (name, optional icon and color); `gallery_update_collection` to rename or change icon and color.
+5. **Move.** `gallery_move_generation` with the item id and the collection id; `collection_id: null` takes an item out of its collection.
+6. **Remove a collection** with `gallery_delete_collection` only after the user confirms: the collection goes away, its items stay in the library without a collection.
+7. **Report:** what moved where, counts per collection.
 
-When sorting many items, show the plan first (which items go to which collection) and ask for the go-ahead. Good groupings: by project or client, by type (images / video), by month.
+Good groupings: by project or client (match words in the descriptions), by type (images / video), by month (date filters). Ask which one the user wants if it is not clear.

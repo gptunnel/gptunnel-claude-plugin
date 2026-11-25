@@ -2,7 +2,7 @@
   "$schema": "https://cursor.com/schemas/cursor-plugin/plugin.json",
   "name": "gptunnel",
   "displayName": "GPTunneL",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "GPTunneL for AI agents: generate images and video in the GPTunneL Lab (exact price shown before every run), build and run node workflows, retouch photos, and organize your gallery. Ready-made scenarios for marketplace cards, product photoshoots, ad creatives and short videos. Connects to the GPTunneL MCP server with OAuth.",
   "author": {
     "name": "GPTunneL",

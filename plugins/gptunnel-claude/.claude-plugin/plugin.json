@@ -1,7 +1,7 @@
 {
   "name": "gptunnel",
-  "version": "0.2.0",
-  "description": "Organize your GPTunneL media library and design node workflows from Claude: find past results, sort them into collections, upload files, copy ready-made workflow templates, and build or fix workflows that you then open in the GPTunneL editor. Connects to your GPTunneL account with OAuth; nothing here spends your balance.",
+  "version": "0.3.0",
+  "description": "Your GPTunneL media library in Claude: find past images and videos by description or date, get full-size download links, make share lists for clients, sort results into collections and get an overview of what is in the library. Connects to your GPTunneL account with OAuth; nothing here creates media or spends your balance.",
   "author": {
     "name": "GPTunneL",
     "email": "support@gptunnel.ai",
@@ -16,10 +16,10 @@
   "license": "MIT",
   "keywords": [
     "gptunnel",
-    "workflows",
     "media-library",
     "gallery",
-    "templates",
+    "collections",
+    "export",
     "mcp"
   ],
   "displayName": "GPTunneL",
