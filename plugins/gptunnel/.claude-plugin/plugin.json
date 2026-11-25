@@ -1,0 +1,20 @@
+{
+  "name": "gptunnel",
+  "version": "0.1.0",
+  "description": "GPTunneL for Claude Code: generate images and video in the GPTunneL Lab (price shown before every run), build and run node workflows, and organize your gallery. Connects to the GPTunneL MCP server with OAuth.",
+  "author": {
+    "name": "GPTunneL",
+    "url": "https://gptunnel.ru"
+  },
+  "homepage": "https://docs.gptunnel.ru/mcp/about/",
+  "repository": "https://github.com/gptunnel/gptunnel-claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "gptunnel",
+    "image-generation",
+    "video-generation",
+    "workflows",
+    "mcp"
+  ],
+  "privacyPolicyUrl": "https://www.gptunnel.ru/en/documents/privacy"
+}

@@ -1,0 +1,18 @@
+{
+  "name": "gptunnel",
+  "owner": {
+    "name": "GPTunneL",
+    "url": "https://gptunnel.ru"
+  },
+  "metadata": {
+    "description": "Official GPTunneL plugins for Claude Code: image and video generation in the GPTunneL Lab, workflows and gallery through the GPTunneL MCP server."
+  },
+  "plugins": [
+    {
+      "name": "gptunnel",
+      "source": "./plugins/gptunnel",
+      "description": "Generate images and video in the GPTunneL Lab, build and run workflows, organize your gallery — from Claude Code.",
+      "category": "media"
+    }
+  ]
+}
