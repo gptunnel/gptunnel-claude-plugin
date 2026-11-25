@@ -1,0 +1,34 @@
+# Tools of https://gptunnel.ru/mcp for a regular user token (not admin).
+# Refresh: call tools/list with a user token and replace the list; the check fails on any skill that names a tool missing here.
+app_get_task
+app_run
+apps_list
+cancel_execution
+create_workflow
+delete_workflow
+fork_template
+gallery_create_collection
+gallery_delete_collection
+gallery_list_collections
+gallery_list_generations
+gallery_move_generation
+gallery_update_collection
+get_execution
+get_node_type
+get_workflow
+lab_generate
+lab_get_generation
+lab_get_model
+lab_list_models
+lab_quote
+list_node_categories
+list_node_types
+list_orgs
+list_templates
+list_workflows
+reset_node
+retry_node
+run_workflow
+update_workflow
+upload_media
+whoami

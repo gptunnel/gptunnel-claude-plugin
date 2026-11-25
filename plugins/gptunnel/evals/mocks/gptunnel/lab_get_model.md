@@ -1,0 +1,1 @@
+{"id":"nano-banana-2-1","name":"Nano Banana 2.1","type":"image","params":[{"key":"aspect_ratio","type":"enum","options":["1:1","3:4","4:3","9:16","16:9"],"default":"1:1"},{"key":"resolution","type":"enum","options":["1K","2K","4K"],"default":"1K"}],"inputs":[{"key":"image_input","kind":"image","max":10,"required":false}],"prompt":{"max_length":5000}}

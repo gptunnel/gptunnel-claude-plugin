@@ -1,0 +1,35 @@
+name: evals
+
+# Runs real Claude sessions against mocked GPTunneL tools. Manual: it costs API credits.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  evals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        plugin: [gptunnel, gptunnel-claude]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --global --silent @anthropic-ai/claude-code
+      - name: claude plugin eval
+        working-directory: plugins/${{ matrix.plugin }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: claude plugin eval . --runs 3 --ablation none --trust-plugin --no-publish --threshold 0.66 --max-cost-usd 5 --json eval-result.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: evals-${{ matrix.plugin }}
+          path: |
+            plugins/${{ matrix.plugin }}/evals/results/
+            plugins/${{ matrix.plugin }}/eval-result.json

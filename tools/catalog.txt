@@ -1,0 +1,20 @@
+# Tools of https://gptunnel.ru/mcp/claude (CATALOG_TOOLS in the GPTunneL server, catalogSurface.ts).
+whoami
+list_orgs
+upload_media
+gallery_list_generations
+gallery_list_collections
+gallery_create_collection
+gallery_update_collection
+gallery_delete_collection
+gallery_move_generation
+list_workflows
+get_workflow
+create_workflow
+update_workflow
+delete_workflow
+list_templates
+fork_template
+list_node_categories
+list_node_types
+get_node_type

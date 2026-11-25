@@ -1,0 +1,15 @@
+{
+  "name": "gptunnel",
+  "version": "0.2.0",
+  "description": "Organize your GPTunneL media library and design node workflows from Claude: find past results, sort them into collections, upload files, copy ready-made workflow templates, and build or fix workflows that you then open in the GPTunneL editor. Connects to your GPTunneL account with OAuth; nothing here spends your balance.",
+  "author": {
+    "name": "GPTunneL",
+    "email": "support@gptunnel.ai",
+    "url": "https://gptunnel.ru"
+  },
+  "homepage": "https://docs.gptunnel.ru/mcp/about/",
+  "repository": "https://github.com/gptunnel/gptunnel-claude-plugin",
+  "license": "MIT",
+  "keywords": ["gptunnel", "workflows", "media-library", "gallery", "templates", "mcp"],
+  "privacyPolicyUrl": "https://www.gptunnel.ru/en/documents/privacy"
+}

@@ -1,0 +1,49 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Static checks (skills, versions, MCP surfaces)
+        run: |
+          pip install --quiet pyyaml jsonschema
+          python scripts/check.py
+
+      - name: Agent Plugins schema (Codex)
+        run: |
+          python - <<'PY'
+          import json, urllib.request, jsonschema
+          for f, url in [
+              ('plugins/gptunnel/plugin.json', 'https://agent-plugins.org/schemas/1.0.0/plugin.schema.json'),
+              ('plugins/gptunnel/mcp.json', 'https://agent-plugins.org/schemas/1.0.0/mcp.schema.json'),
+          ]:
+              schema = json.load(urllib.request.urlopen(url))
+              jsonschema.validate(json.load(open(f)), schema)
+              print('ok', f)
+          PY
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Claude Code plugin validate
+        run: |
+          npm install --global --silent @anthropic-ai/claude-code
+          claude plugin validate .
+          claude plugin validate plugins/gptunnel --profile directory
+          claude plugin validate plugins/gptunnel-claude --profile directory

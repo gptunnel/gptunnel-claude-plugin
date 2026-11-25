@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "gptunnel": {
+      "type": "http",
+      "url": "https://gptunnel.ru/mcp/claude"
+    }
+  }
+}
