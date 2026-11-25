@@ -5,7 +5,7 @@ description: Connect Claude to the user's GPTunneL account and check that it wor
 
 # Connect GPTunneL
 
-The plugin connects to the GPTunneL MCP server `https://gptunnel.ru/mcp/claude`. Sign-in is OAuth in the browser: there is no API key to paste, and you never ask the user for a password.
+The plugin connects to the GPTunneL MCP server `https://gptunnel.ru/mcp/claude`. Sign-in happens in the browser on gptunnel.ru (OAuth): there is nothing to copy, and the user never types their sign-in details into the chat.
 
 ## 1. Check the connection
 

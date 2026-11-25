@@ -13,7 +13,7 @@ Nothing in this plugin spends your balance: workflows are run in the GPTunneL ed
 
 In Claude Code, once the plugin is in the directory: `/plugin install gptunnel@claude-plugins-official`. In Claude apps: Settings → Connectors → GPTunneL.
 
-Sign-in is OAuth in the browser — no API key to copy. The plugin connects to `https://gptunnel.ru/mcp/claude` and asks only for workflow and library access.
+Sign-in happens in the browser on gptunnel.ru (OAuth); there is nothing to copy. The plugin connects to `https://gptunnel.ru/mcp/claude` and asks only for workflow and library access.
 
 ## Data
 
