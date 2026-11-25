@@ -1,6 +1,6 @@
 ---
 name: workflow-build
-description: Build, edit and run GPTunneL node workflows — pipelines that chain models (prompt → image → upscale → video). Use when the user wants a reusable pipeline, a batch of similar results, or to change or run an existing GPTunneL workflow.
+description: Build, edit and run GPTunneL node workflows — pipelines that chain models (prompt → image → upscale → video). Use when the user wants a reusable pipeline, a batch of similar results, or to change or run an existing GPTunneL workflow. NOT for a single image or video (use lab-generate) or when a ready template fits (use workflow-templates).
 ---
 
 # GPTunneL workflows

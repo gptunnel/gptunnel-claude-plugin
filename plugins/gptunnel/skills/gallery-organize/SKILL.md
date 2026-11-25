@@ -1,6 +1,6 @@
 ---
 name: gallery-organize
-description: Find and organize generations in the GPTunneL Lab gallery — search by prompt, sort into collections, rename or remove collections. Use when the user asks to find a past image or video, or to tidy up their GPTunneL gallery.
+description: Find and organize generations in the GPTunneL Lab gallery — search by prompt, sort into collections, rename or remove collections. Use when the user asks to find a past image or video, or to tidy up their GPTunneL gallery. NOT for generating new images (use lab-generate).
 ---
 
 # GPTunneL gallery

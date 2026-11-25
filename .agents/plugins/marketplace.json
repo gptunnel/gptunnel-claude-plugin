@@ -1,0 +1,20 @@
+{
+  "name": "gptunnel",
+  "interface": {
+    "displayName": "GPTunneL"
+  },
+  "plugins": [
+    {
+      "name": "gptunnel",
+      "source": {
+        "source": "local",
+        "path": "./plugins/gptunnel"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Design"
+    }
+  ]
+}

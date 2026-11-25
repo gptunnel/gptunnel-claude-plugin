@@ -2,17 +2,20 @@
   "name": "gptunnel",
   "owner": {
     "name": "GPTunneL",
+    "email": "support@gptunnel.ai",
     "url": "https://gptunnel.ru"
   },
   "metadata": {
-    "description": "Official GPTunneL plugins for Claude Code: image and video generation in the GPTunneL Lab, workflows and gallery through the GPTunneL MCP server."
+    "description": "GPTunneL plugins for AI agents: image and video generation, workflows and gallery through the GPTunneL MCP server.",
+    "version": "0.2.0"
   },
   "plugins": [
     {
       "name": "gptunnel",
       "source": "./plugins/gptunnel",
-      "description": "Generate images and video in the GPTunneL Lab, build and run workflows, organize your gallery — from Claude Code.",
-      "category": "media"
+      "description": "GPTunneL for AI agents: generate images and video in the GPTunneL Lab (exact price shown before every run), build and run node workflows, retouch photos, and organize your gallery. Ready-made scenarios for marketplace cards, product photoshoots, ad creatives and short videos. Connects to the GPTunneL MCP server with OAuth.",
+      "category": "design",
+      "version": "0.2.0"
     }
   ]
 }

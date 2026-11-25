@@ -1,6 +1,6 @@
 ---
 name: lab-generate
-description: Generate images or video with GPTunneL Lab models — pick a model for the task, show the exact price before running, start the generation and return the result. Use when the user asks to create, draw, render, animate or edit an image or video through GPTunneL.
+description: Generate images or video with GPTunneL Lab models — pick a model for the task, show the exact price before running, start the generation and return the result. Use when the user asks to create, draw, render, animate or edit an image or video through GPTunneL and no scenario skill fits better. NOT for marketplace cards, product or portrait photoshoots, ad creatives, short videos, logos (use the matching scenario skill), or one-click fixes like background removal (use photo-retouch).
 ---
 
 # Generate in the GPTunneL Lab

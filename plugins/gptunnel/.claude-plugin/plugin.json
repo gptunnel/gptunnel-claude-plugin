@@ -1,9 +1,10 @@
 {
   "name": "gptunnel",
-  "version": "0.1.0",
-  "description": "GPTunneL for Claude Code: generate images and video in the GPTunneL Lab (price shown before every run), build and run node workflows, and organize your gallery. Connects to the GPTunneL MCP server with OAuth.",
+  "version": "0.2.0",
+  "description": "GPTunneL for AI agents: generate images and video in the GPTunneL Lab (exact price shown before every run), build and run node workflows, retouch photos, and organize your gallery. Ready-made scenarios for marketplace cards, product photoshoots, ad creatives and short videos. Connects to the GPTunneL MCP server with OAuth.",
   "author": {
     "name": "GPTunneL",
+    "email": "support@gptunnel.ai",
     "url": "https://gptunnel.ru"
   },
   "homepage": "https://docs.gptunnel.ru/mcp/about/",
@@ -14,6 +15,10 @@
     "image-generation",
     "video-generation",
     "workflows",
+    "marketplace-cards",
+    "product-photography",
+    "ad-creatives",
+    "photo-retouch",
     "mcp"
   ],
   "privacyPolicyUrl": "https://www.gptunnel.ru/en/documents/privacy"

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "gptunnel",
+  "version": "0.2.0",
+  "description": "GPTunneL for AI agents: generate images and video in the GPTunneL Lab (exact price shown before every run), build and run node workflows, retouch photos, and organize your gallery. Ready-made scenarios for marketplace cards, product photoshoots, ad creatives and short videos. Connects to the GPTunneL MCP server with OAuth.",
+  "author": {
+    "name": "GPTunneL",
+    "email": "support@gptunnel.ai",
+    "url": "https://gptunnel.ru"
+  },
+  "homepage": "https://docs.gptunnel.ru/mcp/about/",
+  "repository": "https://github.com/gptunnel/gptunnel-claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "gptunnel",
+    "image-generation",
+    "video-generation",
+    "workflows",
+    "marketplace-cards",
+    "product-photography",
+    "ad-creatives",
+    "photo-retouch",
+    "mcp"
+  ],
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/gptunnel-setup/SKILL.md",
+      "interface": {
+        "displayName": "GPTunneL",
+        "shortDescription": "Images, video and workflows from your agent",
+        "longDescription": "GPTunneL turns your agent into a creative production assistant. Generate images and video with dozens of Lab models, see the exact price before every run, build reusable node workflows, retouch photos (background removal, upscale, restoration), and keep results organized in your GPTunneL gallery.\n\nReady-made scenarios: marketplace cards for Wildberries, Ozon and Yandex Market, product photoshoots, ad creative packs, short vertical videos, portrait photoshoots, logos and sticker packs.\n\nGenerations are paid from your GPTunneL balance or an organization balance you choose. Sign in with your GPTunneL account; no API key needed.",
+        "developerName": "GPTunneL",
+        "category": "Design",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://gptunnel.ru",
+        "privacyPolicyURL": "https://www.gptunnel.ru/en/documents/privacy",
+        "termsOfServiceURL": "https://www.gptunnel.ru/en/documents/contract",
+        "defaultPrompt": [
+          "Make Wildberries cards from this product photo",
+          "Show me the price, then generate a product shot on a white background",
+          "Turn this photo into a 9:16 video for Reels"
+        ],
+        "brandColor": "#0A0A0A",
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/logo.png"
+      }
+    }
+  }
+}
