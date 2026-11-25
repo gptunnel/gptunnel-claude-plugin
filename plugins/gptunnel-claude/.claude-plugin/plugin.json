@@ -8,8 +8,20 @@
     "url": "https://gptunnel.ru"
   },
   "homepage": "https://docs.gptunnel.ru/mcp/about/",
+  "documentationUrl": "https://docs.gptunnel.ru/mcp/about/",
+  "supportUrl": "https://docs.gptunnel.ru/mcp/troubleshooting/",
+  "privacyPolicyUrl": "https://www.gptunnel.ru/en/documents/privacy",
+  "termsOfServiceUrl": "https://www.gptunnel.ru/en/documents/contract",
   "repository": "https://github.com/gptunnel/gptunnel-claude-plugin",
   "license": "MIT",
-  "keywords": ["gptunnel", "workflows", "media-library", "gallery", "templates", "mcp"],
-  "privacyPolicyUrl": "https://www.gptunnel.ru/en/documents/privacy"
+  "keywords": [
+    "gptunnel",
+    "workflows",
+    "media-library",
+    "gallery",
+    "templates",
+    "mcp"
+  ],
+  "displayName": "GPTunneL",
+  "icon": "./assets/logo.png"
 }
