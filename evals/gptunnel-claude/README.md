@@ -2,10 +2,10 @@
 
 Behavior checks with `claude plugin eval`. The GPTunneL MCP server is mocked: `mocks/gptunnel/<tool>.md` is the canned answer for that tool; a case can override it in `<case>/mocks/gptunnel/`. Nothing reaches gptunnel.ru and nothing is charged.
 
-Run from the plugin folder (each run is a Claude session on your credential):
+Evals live outside the plugin folders (the Anthropic directory rejects eval files inside a submitted plugin). `scripts/eval.sh` copies the plugin and its evals into a temp folder and runs there; each run is a Claude session on your credential:
 
 ```bash
-claude plugin eval . --runs 1 --ablation none --trust-plugin --no-publish
+scripts/eval.sh gptunnel-claude --runs 1
 ```
 
 Plugin MCP tools are named `mcp__plugin_gptunnel_gptunnel__<tool>`. For "the tool must not be called" use `tool_used` with both `min: 0` and `max: 0` (`min` defaults to 1).

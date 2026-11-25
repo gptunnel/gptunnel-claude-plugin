@@ -8,7 +8,7 @@
 | `plugins/gptunnel-claude/` | Anthropic plugin directory variant: MCP `https://gptunnel.ru/mcp/claude` (media library and workflow design, no paid calls). Not listed in our marketplaces. |
 | `tools/full.txt`, `tools/catalog.txt` | Tool names of each MCP surface. Skills may name only these tools. |
 | `scripts/check.py` | Static checks, run in CI. |
-| `evals/` | Behavior evals with a mocked MCP server (`claude plugin eval`). |
+| `evals/<plugin>/` | Behavior evals with a mocked MCP server, run with `scripts/eval.sh <plugin>`. Kept outside the plugin folders: the Anthropic directory rejects eval files inside a submitted plugin. |
 
 ## Skill rules
 
@@ -23,6 +23,6 @@
 1. Change `VERSION` and the same version in every manifest (`scripts/check.py` checks they match).
 2. `python3 scripts/check.py` and `claude plugin validate .`.
 3. Install from a local path in a temporary profile: `CLAUDE_CONFIG_DIR=$(mktemp -d) claude plugin marketplace add "$PWD"`, Codex `CODEX_HOME=$(mktemp -d) codex plugin marketplace add "$PWD"`, Cursor `cursor-agent --plugin-dir plugins/gptunnel`.
-4. Run evals before changing skill behavior (see `evals/README.md`).
+4. Run evals before changing skill behavior: `scripts/eval.sh gptunnel --runs 1` (see `evals/<plugin>/README.md`).
 
 When the MCP server adds or removes tools, update `tools/*.txt` in the same change.

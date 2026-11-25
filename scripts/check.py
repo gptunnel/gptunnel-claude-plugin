@@ -118,7 +118,20 @@ def check_manifests() -> None:
             err(f'README.md: skill `{name}` is not listed')
 
 
+def check_directory_files() -> None:
+    # Files the Anthropic directory accepts from non-Verified organizations: prose, JSON, PNG.
+    allowed = {'.md', '.json', '.png', ''}
+    base = ROOT / 'plugins' / 'gptunnel-claude'
+    for f in base.rglob('*'):
+        if f.is_file() and (f.suffix.lower() not in allowed or 'evals' in f.relative_to(base).parts):
+            err(f'{f.relative_to(ROOT)}: not accepted in the Anthropic directory (only .md, .json, .png; no evals)')
+    for plugin in PLUGINS:
+        if (ROOT / 'plugins' / plugin / 'evals').exists():
+            err(f'plugins/{plugin}/evals: keep evals in evals/{plugin}/')
+
+
 check_manifests()
+check_directory_files()
 for plugin, cfg in PLUGINS.items():
     check_skills(plugin, cfg)
 

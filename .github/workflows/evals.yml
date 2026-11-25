@@ -22,14 +22,11 @@ jobs:
           node-version: '22'
       - run: npm install --global --silent @anthropic-ai/claude-code
       - name: claude plugin eval
-        working-directory: plugins/${{ matrix.plugin }}
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: claude plugin eval . --runs 3 --ablation none --trust-plugin --no-publish --threshold 0.66 --max-cost-usd 5 --json eval-result.json
+        run: scripts/eval.sh ${{ matrix.plugin }} --runs 3 --threshold 0.66 --max-cost-usd 5
       - uses: actions/upload-artifact@v5
         if: always()
         with:
           name: evals-${{ matrix.plugin }}
-          path: |
-            plugins/${{ matrix.plugin }}/evals/results/
-            plugins/${{ matrix.plugin }}/eval-result.json
+          path: evals/results/${{ matrix.plugin }}/
